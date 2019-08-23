@@ -25,6 +25,7 @@ const ColorList = ({ colors, updateColors }) => {
     axiosWithAuth().put(`http://localhost:5000/api/colors/${colorToEdit.id}`, colorToEdit)
     .then(res => console.log(res))
     .catch(err => console.log(err.response))
+    window.location.reload()
 
   };
 
@@ -34,6 +35,7 @@ const ColorList = ({ colors, updateColors }) => {
     axiosWithAuth().delete(`http://localhost:5000/api/colors/${color.id}`, colorToEdit )
     .then(res => console.log(res))
     .catch(err => console.log(err.response))
+    window.location.reload()
   };
 
   return (
